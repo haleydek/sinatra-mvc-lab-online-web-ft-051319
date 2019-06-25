@@ -1,5 +1,9 @@
 class PigLatinizer
   
+  def initialize(user_phrase)
+    @user_phrase = user_phrase
+  end
+  
   def piglatinize_word(word)
     first_letter = word[0].downcase
     
