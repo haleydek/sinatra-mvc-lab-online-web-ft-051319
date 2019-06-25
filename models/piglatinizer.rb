@@ -25,9 +25,10 @@ class PigLatinizer
   end
   
   def split_sentence(string)
-     = string.split(" ")
-    words_array.map do |word|
-      piglatinize(word)
+    piglatinized = []
+    string.split(" ").each do |word|
+      piglatinized << piglatinize(word)
     end
+    piglatinized.
   end
 end
