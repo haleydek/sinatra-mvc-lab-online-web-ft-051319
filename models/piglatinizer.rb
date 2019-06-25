@@ -21,6 +21,7 @@ class PigLatinizer
         end
       end
       consonants
+      word.slice()
     end
   end
   
