@@ -24,9 +24,9 @@ class PigLatinizer
     end
   end
   
-  def piglatinize_text(user_phrase)
+  def piglatinize_text
     piglatinized = []
-    user_phrase.split(" ").each do |word|
+    @user_phrase.split(" ").each do |word|
       piglatinized << piglatinize_word(word)
     end
     piglatinized.join(" ")
