@@ -20,8 +20,7 @@ class PigLatinizer
           consonants << letter
         end
       end
-      consonants
-      word.slice()
+      word.slice(consonants.length..-1) + consonants.join(",")
     end
   end
   
