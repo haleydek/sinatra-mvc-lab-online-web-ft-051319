@@ -1,8 +1,8 @@
 class PigLatinizer
-  attr_accessor :string
+  attr_accessor :user_phrase
   
-  def initialize(string)
-    @string = string
+  def initialize(user_phrase)
+    @user_phrase = user_phrase
   end
   
   def piglatinize_word(word)
@@ -24,9 +24,9 @@ class PigLatinizer
     end
   end
   
-  def piglatinize_text(string)
+  def piglatinize_text(user_phrase)
     piglatinized = []
-    string.split(" ").each do |word|
+    user_phrase.split(" ").each do |word|
       piglatinized << piglatinize_word(word)
     end
     piglatinized.join(" ")
