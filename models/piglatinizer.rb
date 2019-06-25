@@ -2,7 +2,7 @@ class PigLatinizer
   attr_reader :user_phrase
   
   def initialize(user_phrase)
-    @user_phrase = user_phrase.downcase
+    @user_phrase = user_phrase
   end
   
   def piglatinize_word(word)
@@ -26,7 +26,7 @@ class PigLatinizer
   
   def piglatinize_text
     piglatinized = []
-    @user_phrase.split(" ").each do |word|
+    user_phrase.split(" ").each do |word|
       piglatinized << piglatinize_word(word)
     end
     piglatinized.join(" ")
