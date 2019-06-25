@@ -9,10 +9,10 @@ class App < Sinatra::Base
     @user_input = params["user_input"]
     @piglatinizer = PigLatinizer.new(@user_input)
     
-    erb :results
+    erb :piglatinize
   end
   
-  get '/results' do
-    erb :results
+  get '/piglatinize' do
+    erb :piglatinize
   end
 end
