@@ -29,6 +29,6 @@ class PigLatinizer
     string.split(" ").each do |word|
       piglatinized << piglatinize(word)
     end
-    piglatinized.
+    piglatinized.join(" ")
   end
 end
