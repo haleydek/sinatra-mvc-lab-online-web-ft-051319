@@ -25,6 +25,9 @@ class PigLatinizer
   end
   
   def split_sentence(string)
-    string.split(" ")
+     = string.split(" ")
+    words_array.map do |word|
+      piglatinize(word)
+    end
   end
 end
