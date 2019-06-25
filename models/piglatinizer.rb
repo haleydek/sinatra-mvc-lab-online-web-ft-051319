@@ -20,7 +20,7 @@ class PigLatinizer
           consonants << letter
         end
       end
-      word.slice(consonants.length..-1) + consonants.join(",")
+      word.slice(consonants.length..-1) + consonants.join + "ay"
     end
   end
   
