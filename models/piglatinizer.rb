@@ -6,21 +6,20 @@ class PigLatinizer
   end
   
   def piglatinize(word)
+    consonants = []
     first_letter = word[0].downcase
     
     if ["a", "e", "i", "o", "u"].include?(first_letter)
       word + "way"
     else
-      array = word.split("")
-      consonants = []
-      array.each_with_index do |letter, i|
+      letter_array = word.split("")
+      letter_array.each do |letter|
         if ["a", "e", "i", "o", "u"].include?(letter)
           break
         else
           consonants << letter
         end
       end
-      consonants
     end
   end
   
