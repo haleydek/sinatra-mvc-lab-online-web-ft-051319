@@ -5,7 +5,7 @@ class PigLatinizer
     @string = string
   end
   
-  def piglatinize(word)
+  def piglatinize_word(word)
     first_letter = word[0].downcase
     
     if ["a", "e", "i", "o", "u"].include?(first_letter)
@@ -24,10 +24,10 @@ class PigLatinizer
     end
   end
   
-  def split_sentence(string)
+  def piglatinize_text(string)
     piglatinized = []
     string.split(" ").each do |word|
-      piglatinized << piglatinize(word)
+      piglatinized << piglatinize_word(word)
     end
     piglatinized.join(" ")
   end
